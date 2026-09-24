@@ -1,0 +1,1028 @@
+
+🏆 ServiceNow CSA — Final Revision
+
+1. Platform & Navigation
+
+Instance
+
+Instance = dedicated ServiceNow environment.
+
+Common environments: Development → Test → Production.
+
+
+Application Navigator
+
+Used to find applications/modules.
+
+All → browse applications/modules.
+
+Favorites → frequently used modules.
+
+History → recently visited items.
+
+
+Next Experience / Unified Navigation
+
+Modern ServiceNow navigation experience.
+
+Provides centralized navigation/search and user personalization.
+
+
+Application
+
+Application = collection of related functionality/modules/tables.
+
+Scoped application limits application components/data to a defined scope.
+
+
+
+---
+
+2. Tables & Database
+
+Table
+
+Stores records of a particular type.
+
+Example:
+
+Incident table → Incident records.
+
+Record
+
+One row in a table.
+
+Field
+
+One piece of information in a record.
+
+Example:
+
+Incident → Short Description
+
+Common field types
+
+String
+
+Integer
+
+Date/Time
+
+Boolean
+
+Choice
+
+Reference
+
+List
+
+
+Reference Field ⭐
+
+Links a record to another table.
+
+Example:
+
+Incident → Caller → User
+
+sys_id ⭐
+
+Unique identifier for a record.
+
+Usually a 32-character hexadecimal value.
+
+Remains associated with that record.
+
+
+Dictionary
+
+Stores metadata about tables and fields.
+
+Think:
+
+> Data = actual records
+Dictionary = information describing the data
+
+
+
+
+---
+
+3. Table Inheritance ⭐
+
+ServiceNow uses parent/child tables.
+
+Example:
+
+Task
+ ├── Incident
+ ├── Problem
+ ├── Change Request
+ └── Catalog Task
+
+Child tables inherit fields/functionality from parent tables.
+
+Task table = major parent table.
+
+
+---
+
+4. Lists & Forms
+
+List
+
+Displays multiple records.
+
+Form
+
+Displays/edits one record.
+
+Filter
+
+Used to restrict records shown in a list.
+
+Example:
+
+State = Open
+AND
+Priority = 1
+
+AND vs OR
+
+AND Both conditions must be true.
+
+OR Either condition can be true.
+
+Breadcrumb
+
+Shows the current filter/navigation path and allows filter manipulation.
+
+
+---
+
+5. Forms — Important ⭐
+
+Form Layout
+
+Controls which fields appear and their order.
+
+Related List
+
+Displays related records on a form.
+
+Example:
+
+Incident → Related Tasks / Attachments etc.
+
+View
+
+Different presentation of the same record/form.
+
+Form Template
+
+Used to prepopulate fields when creating records.
+
+Form Sections
+
+Organize fields into logical sections.
+
+Form saving options
+
+Know the difference between actions such as:
+
+Save
+
+Update
+
+Save & Stay / equivalent form actions depending on UI
+
+
+Main concept: saving a record commits the changes.
+
+
+---
+
+6. Tags
+
+Tags help users categorize/organize records for easier identification and retrieval.
+
+Example:
+
+Incident
+↓
+Tag: VIP
+Tag: Network
+
+
+---
+
+7. Users, Groups & Roles
+
+User
+
+Individual person/account.
+
+Group
+
+Collection of users.
+
+Assignment Group ⭐
+
+Team responsible for working on a task.
+
+Assigned To
+
+Specific individual responsible for the task.
+
+Think:
+
+> Assignment Group = Team
+Assigned To = Person
+
+
+
+
+---
+
+8. Roles
+
+Roles determine what users can access/do.
+
+Examples:
+
+admin
+
+itil
+
+
+Roles can be assigned:
+
+Directly to users
+
+Through groups
+
+
+Role inheritance
+
+A role can inherit permissions associated with another role.
+
+
+---
+
+9. Authentication vs Authorization ⭐⭐⭐
+
+Authentication
+
+Who are you?
+
+Example:
+
+> Login with username/password.
+
+
+
+Authorization
+
+What are you allowed to do?
+
+Example:
+
+> Can this user edit incidents?
+
+
+
+Remember:
+
+> AuthN = Identity
+AuthZ = Permissions
+
+
+
+
+---
+
+10. ACLs ⭐⭐⭐
+
+Access Control List = controls access to data.
+
+Can control:
+
+Read
+
+Write
+
+Create
+
+Delete
+
+
+Can apply at:
+
+Table
+
+Record
+
+Field
+
+
+ACL evaluation can involve:
+
+Roles
+
+Conditions
+
+Scripts
+
+
+Key exam thought
+
+> User has a role ≠ automatically has access to everything.
+
+
+
+ACLs determine whether access is permitted.
+
+
+---
+
+11. Impersonation
+
+Allows an administrator to temporarily act as another user.
+
+Used for:
+
+> Testing/troubleshooting user permissions and experience.
+
+
+
+
+---
+
+12. Admin & Elevated Privileges
+
+Admin
+
+Powerful administrative role.
+
+Elevated privileges
+
+Temporarily obtain additional privileges for sensitive administrative tasks.
+
+
+---
+
+13. Tasks ⭐⭐⭐
+
+A Task represents work that needs to be performed.
+
+Examples:
+
+Incident
+
+Problem
+
+Change
+
+Catalog Task
+
+
+Important fields:
+
+Assignment Group → responsible team
+Assigned To → responsible person
+State → progress
+Priority → urgency/impact-related importance
+
+
+---
+
+14. Incident vs Catalog Item ⭐⭐⭐
+
+Incident
+
+Something is broken / not working.
+
+Example:
+
+> "My laptop Wi-Fi stopped working."
+
+
+
+Catalog Item
+
+User wants to request something.
+
+Example:
+
+> "I need a new laptop."
+
+
+
+Remember:
+
+> Something broken → Incident
+Want/request something → Catalog
+
+
+
+
+---
+
+15. Knowledge Management
+
+Knowledge Base
+
+Container for knowledge articles.
+
+Knowledge Article
+
+Contains useful information/instructions.
+
+Example:
+
+> "How to reset VPN password"
+
+
+
+Knowledge ≠ Incident
+
+Knowledge provides information.
+
+Incident represents an issue requiring resolution.
+
+
+---
+
+16. Notifications
+
+Notifications can be triggered by:
+
+Conditions
+
+Events
+
+
+Can notify:
+
+Users
+
+Groups
+
+Other configured recipients
+
+
+Purpose:
+
+> Automatically communicate important changes/events.
+
+
+
+
+---
+
+17. Service Catalog ⭐⭐⭐
+
+Catalog Item
+
+Request a service/product.
+
+Record Producer ⭐
+
+Creates a record in another table using a catalog interface.
+
+Example:
+
+Record Producer
+      ↓
+Create Incident
+
+Order Guide
+
+Allows users to request multiple related catalog items together.
+
+Variables
+
+Collect information from the requester.
+
+Example:
+
+Laptop Type
+Operating System
+RAM
+
+Variable Set
+
+Reusable collection of variables.
+
+
+---
+
+18. REQ → RITM → SCTASK ⭐⭐⭐
+
+Memorize this:
+
+Request (REQ)
+     ↓
+Requested Item (RITM)
+     ↓
+Catalog Task (SCTASK)
+
+REQ
+
+Overall request.
+
+RITM
+
+Specific requested item.
+
+SCTASK
+
+Actual fulfillment work.
+
+
+---
+
+19. Approvals
+
+Approval processes can be used before fulfillment or other actions.
+
+Example:
+
+Employee requests laptop
+        ↓
+Manager approval
+        ↓
+Fulfillment
+
+
+---
+
+20. Workflow Studio ⭐⭐⭐
+
+Automation generally follows:
+
+Trigger
+   ↓
+Actions
+   ↓
+Flow
+
+Used to automate:
+
+Tasks
+
+Notifications
+
+Approvals
+
+Record updates
+
+Integrations
+
+
+
+---
+
+21. Virtual Agent
+
+Conversational interface for self-service.
+
+Example:
+
+> User asks Virtual Agent how to reset a password.
+
+
+
+Think:
+
+Virtual Agent = conversational self-service.
+
+
+---
+
+22. Reports vs Dashboards vs Platform Analytics
+
+Report
+
+Visualizes/analyzes data.
+
+Dashboard
+
+Collection of multiple visualizations/reports in one place.
+
+Platform Analytics
+
+Broader analytics capabilities for monitoring, analyzing and acting on data.
+
+Remember:
+
+Report → Individual analysis
+Dashboard → Collection/view
+Platform Analytics → Broader analytics capability
+
+
+---
+
+23. UI Policy vs Data Policy ⭐⭐⭐
+
+UI Policy
+
+Controls form behavior/UI.
+
+Examples:
+
+Make field mandatory
+
+Make field visible
+
+Make field read-only
+
+
+Data Policy
+
+Enforces data requirements, including beyond just the form/UI.
+
+Memory trick:
+
+> UI Policy → UI
+Data Policy → Data
+
+
+
+
+---
+
+24. Client Script vs Business Rule ⭐⭐⭐
+
+Client Script
+
+Runs on the client/browser.
+
+Used for form behavior.
+
+Common types:
+
+onLoad
+
+onChange
+
+onSubmit
+
+onCellEdit
+
+
+Business Rule
+
+Runs on the server.
+
+Used for server-side logic when records are processed.
+
+Memory:
+
+> Client Script → Browser
+Business Rule → Server
+
+
+
+
+---
+
+25. Script Include
+
+Reusable server-side JavaScript.
+
+Think:
+
+> Business Rule = executes logic
+Script Include = reusable server-side logic
+
+
+
+ServiceNow scripting primarily uses:
+
+JavaScript
+
+
+---
+
+26. Configuration vs Customization ⭐
+
+Configuration
+
+Use built-in platform capabilities/settings.
+
+Example:
+
+Form configuration
+
+UI policies
+
+Workflows/flows
+
+Field configuration
+
+
+Customization
+
+Modify/extend functionality beyond standard configuration, often involving custom code or custom components.
+
+Exam principle:
+
+> Prefer configuration when it can achieve the requirement.
+
+
+
+
+---
+
+27. Update Sets ⭐⭐⭐
+
+Used to move configuration/customization changes between instances.
+
+Typical flow:
+
+Create Update Set
+       ↓
+Make changes
+       ↓
+Complete
+       ↓
+Retrieve
+       ↓
+Preview
+       ↓
+Commit
+
+Important
+
+Update Sets generally capture configuration, NOT normal application data records.
+
+Think:
+
+> Update Set → Configuration
+
+
+
+
+---
+
+28. Import Sets ⭐⭐⭐
+
+Used to bring external data into ServiceNow.
+
+Typical flow:
+
+Data Source
+    ↓
+Import Set / Staging Table
+    ↓
+Transform Map
+    ↓
+Target Table
+
+
+---
+
+29. Transform Map
+
+Maps fields from the import/staging table to the target table.
+
+Example:
+
+CSV name
+   ↓
+Transform Map
+   ↓
+User.name
+
+
+---
+
+30. Coalesce ⭐⭐⭐
+
+Coalesce identifies matching existing records during imports.
+
+If a matching value is found, ServiceNow can update the existing record instead of creating a duplicate.
+
+Think:
+
+> Coalesce → Match existing record
+
+
+
+
+---
+
+31. Update Set vs Import Set ⭐⭐⭐⭐
+
+This is VERY exam-worthy.
+
+Update Set	Import Set
+
+Configuration	Data
+Moves configuration between instances	Imports data
+Dev → Test → Prod	External source → ServiceNow
+Captures configuration changes	Uses staging/import tables
+
+
+Memory:
+
+> Update Set = Setup
+Import Set = Information/data
+
+
+
+
+---
+
+32. REST & SOAP
+
+REST
+
+Common web API architecture.
+
+HTTP methods include:
+
+GET → retrieve
+
+POST → create
+
+PUT/PATCH → update
+
+DELETE → delete
+
+
+SOAP
+
+Protocol/message-based web service technology commonly using XML.
+
+CSA level:
+
+> Know the purpose and basic distinction; don't overfocus on implementation.
+
+
+
+
+---
+
+33. IntegrationHub
+
+Used to help integrate ServiceNow with external systems and automate actions.
+
+Think:
+
+> ServiceNow ↔ External systems
+
+
+
+
+---
+
+34. CMDB ⭐⭐⭐
+
+Configuration Management Database
+
+Stores information about Configuration Items (CIs) and their relationships.
+
+CI examples
+
+Server
+
+Database
+
+Application
+
+Network device
+
+
+Example:
+
+Application
+     ↓
+Server
+     ↓
+Database
+
+CMDB helps understand:
+
+> What exists and how things are related.
+
+
+
+
+---
+
+35. CSDM
+
+Common Service Data Model
+
+Provides a standardized framework for organizing ServiceNow data and relationships around services.
+
+CSA level:
+
+> Understand its purpose and relationship to ServiceNow's service/data model.
+
+
+
+
+---
+
+36. Security Center
+
+Provides capabilities for security visibility/posture and security-related information across the platform.
+
+Remember:
+
+> Security Center → Security visibility/posture
+
+
+
+
+---
+
+37. Shared Responsibility Model ⭐
+
+Cloud security responsibility is shared.
+
+Service Provider
+       +
+Customer
+       ↓
+Overall Security
+
+Exact responsibilities depend on the service and configuration.
+
+Don't think:
+
+> "Cloud provider handles everything."
+
+
+
+
+---
+
+🧠 FINAL EXAM MEMORY SHEET
+
+If you remember nothing else, remember these:
+
+Authentication → WHO are you?
+Authorization → WHAT can you do?
+
+Assignment Group → TEAM
+Assigned To → PERSON
+
+Incident → Something is broken
+Catalog Item → Request something
+
+REQ → Overall request
+RITM → Requested item
+SCTASK → Fulfillment work
+
+Record Producer → Creates a record
+Order Guide → Multiple catalog items
+
+Client Script → CLIENT/browser
+Business Rule → SERVER
+Script Include → Reusable server-side JS
+
+UI Policy → Form/UI behavior
+Data Policy → Data enforcement
+
+Update Set → CONFIGURATION
+Import Set → DATA
+
+Transform Map → Maps imported data
+Coalesce → Match/update existing record
+
+Reference field → Links records
+sys_id → Unique record identifier
+Dictionary → Metadata
+
+CMDB → CIs + relationships
+CSDM → Standardized service/data model
+
+REST GET → Retrieve
+REST POST → Create
+
+Virtual Agent → Conversational self-service
+Knowledge → Information/articles
+Workflow/Flow → Automation
+
+Report → Analysis
+Dashboard → Collection of reports/visualizations
+Platform Analytics → Broader analytics
+
+ACL → Access control
+Impersonation → Test as another user
+
+🔥 Your Day 5 Strategy
+
+Don't try to learn another 100 things now.
+
+Round 1: Read this once carefully.
+Round 2: Memorize the ⭐⭐⭐ distinctions.
+Round 3: Take the 60-question full mock under 90 minutes.
+
+Your practice accuracy is already around 98%, so the main goal now is exam-style scenario recognition, not cramming more theory.
+
+Next = 60-question FINAL CSA MOCK. 🗿🔥
