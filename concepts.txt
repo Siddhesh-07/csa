@@ -1,0 +1,77 @@
+ServiceNow CSA – Main Topics and Their Uses
+============================================
+
+1. ServiceNow Platform
+   Used to manage IT services, incidents, requests, and workflows.
+
+2. Navigation & Interface
+   Used to navigate the platform, access modules, and find features.
+
+3. Tables & Records
+   Used to store data in tables and manage individual records.
+
+4. Lists & Forms
+   Lists display multiple records; forms display and edit individual records.
+
+5. Filters & Search
+   Used to find specific records based on conditions.
+
+6. Users, Groups & Roles
+   Used to manage users, organize teams, and control access.
+
+7. Access Control (ACL)
+   Used to control who can read, write, create, or delete data.
+
+8. Applications & Modules
+   Used to organize platform features and functionality.
+
+9. Client Scripts
+   Used to execute JavaScript in the browser and control form behavior.
+
+10. Business Rules
+    Used to execute server-side logic when records are inserted,
+    updated, deleted, or queried.
+
+11. UI Policies
+    Used to make fields mandatory, read-only, or visible based on conditions.
+
+12. Notifications
+    Used to send emails and alerts when specific events occur.
+
+13. Import Sets & Transform Maps
+    Used to import external data and map fields into ServiceNow tables.
+
+14. Update Sets
+    Used to transfer configuration changes between ServiceNow instances.
+
+15. Reports & Dashboards
+    Used to visualize data, track performance, and monitor activities.
+
+16. Service Catalog
+    Used to let users request services, software, hardware, and other items.
+
+17. Knowledge Management
+    Used to create and share knowledge articles, guides, and solutions.
+
+18. CMDB & CSDM
+    CMDB stores information about configuration items.
+    CSDM provides a standard model for organizing service-related data.
+
+19. Flow Designer
+    Used to automate tasks and workflows with minimal or no coding.
+
+20. Virtual Agent
+    Used to provide automated conversational support through chat.
+
+
+IMPORTANT CONCEPTS TO REMEMBER
+===============================
+
+Client Script      - Browser-side behavior.
+Business Rule      - Server-side logic.
+UI Policy          - Controls field visibility, mandatory, and read-only.
+ACL                - Controls access and permissions.
+Update Set         - Transfers configuration changes between instances.
+Transform Map      - Maps imported data to ServiceNow tables.
+CMDB               - Stores configuration item information.
+Flow Designer      - Automates workflows.
