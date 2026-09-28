@@ -41,6 +41,46 @@ ServiceNow CSA – Main Topics and Their Uses
 
 20. Virtual Agent --- Used to provide automated conversational support through chat.
 
+21. Form Layout & Form Design --- Used to customize the arrangement of fields and sections on forms.
+
+22. Dictionary --- Used to define table fields, field types, default values, and field properties.
+
+23. Reference Fields --- Used to link records from one table to records in another table.
+
+24. Table Inheritance --- Used to create child tables that inherit fields and functionality from parent tables.
+
+25. Task Table --- Used as a parent table for task-based records such as incidents, problems, and changes.
+
+26. Data Policies --- Used to enforce data requirements, such as mandatory and read-only fields, on incoming data.
+
+27. UI Actions --- Used to create buttons, links, and context menu options to perform specific actions.
+
+28. Scheduled Jobs --- Used to execute scripts or tasks automatically at scheduled times.
+
+29. Script Includes --- Used to store reusable server-side JavaScript functions.
+
+30. GlideRecord --- Used to query, retrieve, insert, update, and delete records using server-side scripts.
+
+31. GlideSystem (gs) --- Used to access system information, log messages, and perform server-side utility functions.
+
+32. GlideAjax --- Used to call server-side Script Includes from client-side scripts asynchronously.
+
+33. Events & Event Registry --- Used to register and trigger events for notifications and other automated actions.
+
+34. Data Lookup --- Used to automatically populate field values based on predefined matching conditions.
+
+35. Service Level Agreements (SLAs) --- Used to track and manage response and resolution time commitments.
+
+36. Incident Management --- Used to record, track, and resolve service disruptions.
+
+37. Problem Management --- Used to identify the root causes of incidents and prevent recurring issues.
+
+38. Change Management --- Used to plan, assess, approve, and manage changes to IT services.
+
+39. Request Management --- Used to manage user requests for services and track their fulfilment.
+
+40. Assignment Rules --- Used to automatically assign tasks to appropriate users or groups based on conditions.
+
 
 IMPORTANT CONCEPTS TO REMEMBER
 ===============================
