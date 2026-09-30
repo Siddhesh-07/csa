@@ -81,6 +81,25 @@ ServiceNow CSA – Main Topics and Their Uses
 
 40. Assignment Rules --- Used to automatically assign tasks to appropriate users or groups based on conditions.
 
+41. Data Sources --- Used to define where imported data comes from, such as files or external systems.
+
+42. Scheduled Data Imports --- Used to import data from external sources automatically at scheduled intervals.
+
+43. Notifications & Email Templates --- Used to configure email content and send automated communications.
+
+44. Schema Map --- Used to visualize tables, their relationships, and table inheritance.
+
+45. System Properties --- Used to configure platform behavior through system-wide settings.
+
+46. Delegated Development --- Used to allow authorized developers to work on specific application configurations.
+
+47. Application Scope --- Used to isolate application resources and control access between applications.
+
+48. Plugins --- Used to activate additional ServiceNow features and capabilities.
+
+49. Instance Cloning --- Used to copy data and configuration from one ServiceNow instance to another.
+
+50. ServiceNow Store --- Used to discover and install applications and integrations.
 
 IMPORTANT CONCEPTS TO REMEMBER
 ===============================
