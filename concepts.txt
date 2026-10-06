@@ -101,6 +101,25 @@ ServiceNow CSA – Main Topics and Their Uses
 
 50. ServiceNow Store --- Used to discover and install applications and integrations.
 
+51. Assignment Groups --- Used to organize users into teams and route tasks to the appropriate team.
+
+52. User Criteria --- Used to control which users can access specific Service Catalog items or knowledge content.
+
+53. Catalog Items --- Used to provide individual services or products that users can request from the Service Catalog.
+
+54. Record Producers --- Used to allow users to create records in a table through a simplified Service Catalog form.
+
+55. Order Guides --- Used to allow users to request multiple related Catalog Items together.
+
+56. Catalog Variables --- Used to collect additional information from users when they request a Catalog Item.
+
+57. Knowledge Bases --- Used to organize knowledge articles into different collections based on topics or audiences.
+
+58. Notifications Preferences --- Used to control which notifications users receive and how they receive them.
+
+59. Approval Rules --- Used to determine when a record or request requires approval and who should approve it.
+
+60. Workflows --- Used to automate a sequence of activities, approvals, and tasks for business processes.
 IMPORTANT CONCEPTS TO REMEMBER
 ===============================
 
