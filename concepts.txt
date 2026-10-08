@@ -120,7 +120,9 @@ ServiceNow CSA – Main Topics and Their Uses
 59. Approval Rules --- Used to determine when a record or request requires approval and who should approve it.
 
 60. Workflows --- Used to automate a sequence of activities, approvals, and tasks for business processes.
-IMPORTANT CONCEPTS TO REMEMBER
+
+IMPORTANT CONCEPTS TO REMEMBERED 
+
 ===============================
 
 Client Script --- Browser-side behavior.
