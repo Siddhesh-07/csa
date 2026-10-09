@@ -140,3 +140,5 @@ Transform Map --- Maps imported data to ServiceNow tables.
 CMDB --- Stores configuration item information.
 
 Flow Designer --- Automates workflows.
+
+Dot-Walking --- Used to access fields from related records through reference fields.
